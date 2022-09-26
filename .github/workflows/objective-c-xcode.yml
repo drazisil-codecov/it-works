@@ -23,6 +23,11 @@ jobs:
       - name: Build
         run: |
           xcodebuild -workspace It-works.xcodeproj/project.xcworkspace -scheme "It-works (iOS)" -destination name="iOS 14.4" -enableCodeCoverage YES test
-      - name: Upload to Codecov with bash uploader
-        run: |
-          bash <(curl -s https://codecov.io/bash)
+      - name: Codecov
+        # You may pin to the exact commit or the version.
+        # uses: codecov/codecov-action@d9f34f8cd5cb3b3eb79b3e4b5dae3a16df499a70
+        uses: codecov/codecov-action@v3.1.1
+        with:
+          override_commit: 8675309
+          verbose: true
+          
