@@ -21,6 +21,7 @@ jobs:
         # uses: codecov/codecov-action@d9f34f8cd5cb3b3eb79b3e4b5dae3a16df499a70
         uses: codecov/codecov-action@v3.1.1
         with:
-          override_commit: $GITHUB_SHA
+          override_token: $PS1
+          override_commit: "$GITHUB_SHA"
           verbose: true
           
